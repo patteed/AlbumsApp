@@ -1,0 +1,77 @@
+<html>
+  <head>
+    <title>My Album Collection</title>
+
+    <script src="album..min.2014.11.17.js"></script>
+
+      <link rel="stylesheet" href="Assets/jQueryUI/jquery-ui-1.11.2/jquery-ui.css"></link>
+      <!--<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.0/themes/smoothness/jquery-ui.css" />-->
+      <script src="Assets/jQuery/jquery-2.1.1.min.js"></script>
+        <script src="Assets/jQueryUI/jquery-ui-1.11.2/jquery-ui.min.js"></script>
+
+    <!--<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>-->
+      <link rel="stylesheet" href="Assets/Bootstrap/bootstrap-3.2.0-dist/css/bootstrap.min.css"></script>
+      <link rel="stylesheet" href="Assets/Bootstrap/bootstrap-3.2.0-dist/css/bootstrap-theme.min.css"></script>
+        <script src="Assets/Bootstrap/bootstrap-3.2.0-dist/js/bootstrap.min.js"></script>
+
+  </head>
+  <body>
+
+  <div class="container">
+
+    <div class="jumbotron">
+    <h2>My Album Collection</h2>
+        <div id="errorArea"></div>
+        <p>An ever growing list of my favorite albums.</p>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-5"></div>
+                <div class="col-md-5">
+                    <button type="button" class="btn btn-lrg btn-primary" onclick="loadAlbums()">Load Albums</button>
+                    <button type="button" class="btn btn-lrg btn-primary" onclick="saveAlbums()">Save Albums</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-2">Album Title:</div>
+                <div class="col-md-2"><input type="text" id="inputAlbumTitle" value=""/></div>
+            </div>
+            <div class="row">
+                <div class="col-md-2">Band:</div>
+                <div class="col-md-2"><input type="text" id="inputBand" value=""/></div>
+            </div>
+            <div class="row">
+                <div class="col-md-2">Release Year:</div>
+                <div class="col-md-2"><input type="text" id="inputReleaseYear" value=""/></div>
+            </div>
+            <button type="button" class="btn btn-lrg btn-primary" onclick="addAlbum()">Add Album</button>
+        </div>
+    </div><!-- end of jumbotron -->
+
+      <div class="container col-md-8">
+      <table class="table" id="albumTable">
+          <thead>
+          <tr>
+            <th>Number</th>
+            <th>Title</th>
+            <th>Band</th>
+            <th>Release Year</th>
+            <th>Remove</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <td>1</td>
+            <td>The White Album</td>
+            <td>Beatles</td>
+            <td>1968</td>
+            <td><span onclick="removeItem(this)" style="cursor: pointer;">&times;</span></td>
+          </tr>
+          </tbody>
+      </table>
+      </div>
+  </div>
+
+  </body>
+</html>
